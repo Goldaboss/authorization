@@ -1,0 +1,19 @@
+<nav class="navbar bg-primary">
+  <ul>
+    <li routerLinkActive="active">
+      <h1>
+        <a [routerLink]="['/main']">Главная</a>
+      </h1>
+    </li>
+    <li routerLinkActive="active">
+      <h1>
+        <button (click)="removeToken()">test Token</button>
+      </h1>
+    </li>
+    <li routerLinkActive="active">
+      <h1>
+        <a [routerLink]="['/auth']">Авторизация</a>
+      </h1>
+    </li>
+  </ul>
+</nav>

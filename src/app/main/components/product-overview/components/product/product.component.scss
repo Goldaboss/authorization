@@ -1,0 +1,30 @@
+.product {
+  .gallery {
+    display: flex;
+
+    .img  {
+      max-width: 200px;
+      max-height: 200px;
+      padding: 10px;
+    }
+  }
+
+  .price {
+    display: flex;
+    font-size: 2rem;
+    padding: 1rem;
+
+    &__new {
+      font-weight: bold;
+    }
+
+    &__discount {
+      color: var(--danger-color)
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,21 @@
+<nav class="navbar bg-primary">
+
+  <h1>
+<!--    <a [routerLink]="['/auth']">Авторизация</a>-->
+    <p>Главная</p>
+  </h1>
+
+  <ul *ngIf="auth.isAuthenticated()">
+    <li routerLinkActive="active">
+      <a [routerLink]="['/main', 'products']">Продукты</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/main', 'user']">Пользователь</a>
+    </li>
+    <li><a href="#" (click)="logout($event)">Выйти</a></li>
+  </ul>
+</nav>
+<div class="container" style="padding: 0 5px; border: solid 1px grey">
+  <p>main component</p>
+  <router-outlet></router-outlet>
+</div>

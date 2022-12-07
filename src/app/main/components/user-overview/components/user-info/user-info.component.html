@@ -1,0 +1,23 @@
+<p>user component</p>
+<div *ngIf="user; else loading">
+  <div class="user">
+    <div class="img">
+      <img [src]="user.image" alt="">
+    </div>
+
+    <p class="card">Имя: {{user.firstName}}</p>
+    <p class="card">Фамилия: {{user.lastName}}</p>
+    <p class="card">Возраст: {{user.age}}</p>
+    <p class="card">Почта: {{user.email}}</p>
+    <p class="card">Телефон: {{user.phone}}</p>
+    <button
+      class="btn btn-primary"
+      [routerLink]="['/main', 'products']"
+    >Назад
+    </button>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Идет загрузка...</p>
+</ng-template>

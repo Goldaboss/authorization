@@ -1,0 +1,28 @@
+<p>product component</p>
+
+<div *ngIf="product; else loading">
+  <div class="product">
+    <h1 class="bg-primary card">{{product.title}}</h1>
+    <p class="card">{{product.category}} >> {{product.brand}}</p>
+    <div class="gallery">
+      <div *ngFor="let img of product.images" class="img">
+        <img [src]="img" alt="">
+      </div>
+    </div>
+
+    <p class="card card-content">{{product.description}}</p>
+
+    <div class="price">
+      <p class="price price__new">Цена: {{product.price | currency}}</p>
+      <p class="price price__discount">Скидка: {{product.discountPercentage}}%</p>
+    </div>
+    <button
+      class="btn btn-primary"
+      [routerLink]="['/main', 'products']"
+    >Назад</button>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Идет загрузка...</p>
+</ng-template>

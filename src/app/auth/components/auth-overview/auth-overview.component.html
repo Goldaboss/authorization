@@ -1,0 +1,22 @@
+<nav class="navbar bg-primary">
+
+  <h1>
+<!--    <a [routerLink]="['/main']">Главная</a>-->
+    <p>Авторизация</p>
+  </h1>
+
+  <ul>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/auth', 'login']">login</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/auth', 'reg']">reg</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <p>auth-overview component</p>
+
+  <router-outlet></router-outlet>
+</div>
