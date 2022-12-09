@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import {MainComponent} from "./components/main/main.component";
+import { MainOverviewComponent } from "./components/main-overview/main-overview.component";
 import {ProductsComponent} from "./components/products-overview/components/products/products.component";
 import {UserInfoComponent} from "./components/user-overview/components/user-info/user-info.component";
 import {ProductComponent} from "./components/product-overview/components/product/product.component";
@@ -15,15 +15,13 @@ import { UserOverviewComponent } from './components/user-overview/user-overview.
 
 @NgModule({
   declarations: [
-    MainComponent,
+    MainOverviewComponent,
     ProductsOverviewComponent,
     ProductsComponent,
     ProductOverviewComponent,
     ProductComponent,
     UserInfoComponent,
     UserOverviewComponent,
-
-
   ],
   imports: [
     MainRoutingModule,

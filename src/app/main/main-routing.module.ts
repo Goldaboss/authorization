@@ -1,12 +1,12 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {MainComponent} from "./components/main/main.component";
+import {MainOverviewComponent} from "./components/main-overview/main-overview.component";
 import {ProductsOverviewComponent} from "./components/products-overview/products-overview.component";
 import {ProductOverviewComponent} from "./components/product-overview/product-overview.component";
 import {UserOverviewComponent} from "./components/user-overview/user-overview.component";
 
 const routes: Routes = [
-  {path: '', component: MainComponent, children: [
+  {path: '', component: MainOverviewComponent, children: [
       {path: '', redirectTo: 'products', pathMatch: 'full'},
       {path: 'products', component: ProductsOverviewComponent},
       {path: 'user', component: UserOverviewComponent},

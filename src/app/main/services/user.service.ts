@@ -5,15 +5,15 @@ import {BehaviorSubject} from "rxjs";
 @Injectable()
 export class UserService {
 
-  public user$ =new BehaviorSubject<any>(null)
-
-  get userId(): string | null {
-    return localStorage.getItem('userId');
-  }
+  public user$ = new BehaviorSubject<any>(null)
 
   constructor(
     private http: HttpClient
-    ) {
+  ) {
+  }
+
+  get userId(): string | null {
+    return localStorage.getItem('userId');
   }
 
   public getUser(): void {
